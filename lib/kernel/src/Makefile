@@ -18,7 +18,7 @@
 # %CopyrightEnd%
 #
 
-ifdef BOOTSTRAP
+ifeq ($(BOOTSTRAP), 1)
 EGEN=$(BOOTSTRAP_TOP)/lib/kernel/egen
 EBIN=$(BOOTSTRAP_TOP)/lib/kernel/ebin
 endif

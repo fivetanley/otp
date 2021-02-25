@@ -22,7 +22,7 @@ ifdef BOOTSTRAP_COMPILER
 EGEN=$(BOOTSTRAP_COMPILER)/egen
 EBIN=$(BOOTSTRAP_COMPILER)/ebin
 else
-ifdef BOOTSTRAP
+ifeq ($(BOOTSTRAP), 1)
 EGEN=$(BOOTSTRAP_TOP)/lib/compiler/egen
 EBIN=$(BOOTSTRAP_TOP)/lib/compiler/ebin
 endif

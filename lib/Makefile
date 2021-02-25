@@ -55,7 +55,7 @@ endif
 ifdef BUILD_STATIC_LIBS
   SUB_DIRECTORIES = asn1 crypto
 else
-  ifdef BOOTSTRAP
+  ifeq ($(BOOTSTRAP), 1)
     SUB_DIRECTORIES = \
       kernel stdlib compiler
   else

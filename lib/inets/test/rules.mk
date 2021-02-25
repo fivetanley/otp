@@ -18,7 +18,7 @@ DEFAULT_TARGETS =  opt debug instr release release_docs clean docs
 # ----------------------------------------------------
 EMULATOR = beam
 
-ifdef BOOTSTRAP
+ifeq ($(BOOTSTRAP), 1)
 ERL_COMPILE_FLAGS += +slim
 else
 ERL_COMPILE_FLAGS += +debug_info

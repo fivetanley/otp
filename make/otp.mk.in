@@ -104,7 +104,7 @@ EMULATOR = beam
 ifeq ($(ERL_COMPILE_WARNINGS_AS_ERRORS),yes)
   ERL_COMPILE_FLAGS += -Werror
 endif
-ifdef BOOTSTRAP
+ifeq ($(BOOTSTRAP), 1)
   ERL_COMPILE_FLAGS += +slim
 else
   ERL_COMPILE_FLAGS += +debug_info
